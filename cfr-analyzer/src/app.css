@@ -1,0 +1,4 @@
+@plugin 'flowbite/plugin';
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
