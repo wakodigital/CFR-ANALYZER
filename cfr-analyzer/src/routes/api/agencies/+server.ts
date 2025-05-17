@@ -1,7 +1,6 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import { createClient } from '@supabase/supabase-js';
 import { SUPABASE_URL, SUPABASE_ANON_KEY } from '$env/static/private';
-import { join } from 'path';
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
@@ -16,7 +15,7 @@ export const GET: RequestHandler = async ({ url }) => {
     // Build Supabase query
     let query = supabase
       .from('agencies')
-      .select('name, word_count, agency_corrections!left(agency_name.count:correction_count)', { count: 'exact' })
+      .select('name, word_count, sub_agencies, cfr_references, agency_corrections(count)', { count: 'exact' })
       .neq('word_count', 0);
 
     if (search) {
