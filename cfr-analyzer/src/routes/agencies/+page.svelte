@@ -123,9 +123,7 @@
         <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition group cursor-pointer relative overflow-hidden flex flex-col justify-between min-h-64 w-full">
           <div class="flex items-center justify-between mb-2">
             <h2 class="text-xl font-bold text-gray-800 group-hover:text-blue-600 transition">{agency.name}</h2>
-            <span class="bg-blue-100 text-blue-700 text-xs font-semibold px-2 py-1 rounded-full">{agency.short_name || 'N/A'}</span>
           </div>
-          <p class="text-gray-500 text-sm mb-1">Slug: <span class="font-mono">{agency.slug || 'N/A'}</span></p>
           <div class="flex flex-wrap gap-2 my-2">
             <span class="bg-green-100 text-green-700 text-xs font-medium px-2 py-1 rounded">Sub-agencies: {agency.sub_agencies}</span>
             <span class="bg-purple-100 text-purple-700 text-xs font-medium px-2 py-1 rounded">Word Count: {agency.word_count.toLocaleString()}</span>

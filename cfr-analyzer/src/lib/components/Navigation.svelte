@@ -8,8 +8,7 @@
   // Navigation items
   const navItems = [
     { name: 'Dashboard', href: '/' },
-    { name: 'Agencies', href: '/agencies' },
-    { name: 'Errors', href: '/errors' },
+    { name: 'Agencies', href: '/agencies' }
   ];
 
   // Toggle mobile menu
